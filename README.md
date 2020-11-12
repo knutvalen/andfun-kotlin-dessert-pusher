@@ -1,4 +1,5 @@
-# Activity Lifecycle - DessertPusher 
+# Activity Lifecycle - DessertPusher
+[![Build Status](https://app.bitrise.io/app/e9b02be7c8ef17a4/status.svg?token=KuMkDceP6qXLxcsswldBgQ)](https://app.bitrise.io/app/e9b02be7c8ef17a4)
 
 This is the toy app for lesson 4 of the [Android App Development in Kotlin course on Udacity](https://classroom.udacity.com/courses/ud9012/lessons/e487c600-ed68-4576-a35a-12f211cf032e/concepts/6a155d63-8153-4a56-95cb-1dfdf06aa173).
 
