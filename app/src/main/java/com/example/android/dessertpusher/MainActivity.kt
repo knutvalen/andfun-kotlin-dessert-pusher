@@ -85,6 +85,14 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
+
+//        revenue = savedInstanceState?.getInt("revenue", 0) ?: 0
+
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt("revenue", 0)
+            dessertsSold = savedInstanceState.getInt("dessertsSold", 0)
+            dessertTimer.secondsCount = savedInstanceState.getInt("dessertTimer.secondsCount", 0)
+        }
     }
 
     override fun onStart() {
@@ -184,4 +192,14 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("revenue", revenue)
+        outState.putInt("dessertsSold", dessertsSold)
+        outState.putInt("dessertTimer.secondsCount", dessertTimer.secondsCount)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+    }
 }
